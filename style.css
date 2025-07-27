@@ -768,6 +768,78 @@ margin-top: 3%;
 }
  
 
+/* Shuffle Carousel settings*/
+.carousel-container {
+position: relative;
+width: 0px;
+height: 0px;
+overflow: hidden;
+;
+}
+
+.carousel {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
+
+.carousel-item {
+position: absolute;
+top: 0;
+left: 100%;
+width: 100%;
+height: 100%;
+transition: left 1s;
+}
+
+.carousel-item img {
+width: 100%;
+height: 80%;
+object-fit: cover;
+}
+
+.carousel-item a {
+text-decoration: none;
+color: blue;
+}
+
+.carousel-item p {
+position: absolute;
+bottom: 0;
+width: 100%;
+text-align: center;
+}
+
+.carousel-item.active {
+left: 0;
+}
+
+.carousel-nav {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+width: 100%;
+display: flex;
+justify-content: space-between;
+}
+
+.prev-btn, .next-btn {
+background-color: transparent;
+border: none;
+cursor: pointer;
+font-size: 24px;
+padding: 10px;
+}
+
+.prev-btn:hover, .next-btn:hover {
+background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+
+
 /*mobile devices*/ 
 
 @media only screen and (max-width:850px){
@@ -821,11 +893,83 @@ background-color: crimson;}
 .grid{
     
     display: grid;
+text-align: center;
     grid-template-columns:  1fr 1fr ;
         justify-content:space-around;
-    align-content: space-between;
+    align-content: center;
     grid-gap: 20px 40px;
 }
+
+/* Shuffle Carousel settings*/
+.carousel-container {
+position: relative;
+width: 100%;
+height: 400px;
+overflow: hidden;
+;
+}
+
+.carousel {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
+
+.carousel-item {
+position: absolute;
+top: 0;
+left: 100%;
+width: 100%;
+height: 100%;
+transition: left 1s;
+}
+
+.carousel-item img {
+width: 100%;
+height: 80%;
+object-fit: cover;
+}
+
+.carousel-item a {
+text-decoration: none;
+color: blue;
+}
+
+.carousel-item p {
+position: absolute;
+bottom: 0;
+width: 100%;
+text-align: center;
+}
+
+.carousel-item.active {
+left: 0;
+}
+
+.carousel-nav {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+width: 100%;
+display: flex;
+justify-content: space-between;
+}
+
+.prev-btn, .next-btn {
+background-color: transparent;
+border: none;
+cursor: pointer;
+font-size: 24px;
+padding: 10px;
+}
+
+.prev-btn:hover, .next-btn:hover {
+background-color: rgba(0, 0, 0, 0.2);
+}
+
+
 
 }
 
@@ -1010,7 +1154,7 @@ background-color: crimson;}
         
         /* Scroll to top */
     .back-btn {
-      opacity: 0.2;
+      opacity: 0.3;
         position: fixed;
         bottom: 2%;
         right: -100%;
@@ -1051,71 +1195,4 @@ background-color: crimson;}
     #toggle-icon:hover {
       color: #ffffff;
     }
-    /* Shuffle Carousel settings*/
-.carousel-container {
-position: relative;
-width: 100%;
-height: 400px;
-overflow: hidden;
-}
-
-.carousel {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-}
-
-.carousel-item {
-position: absolute;
-top: 0;
-left: 100%;
-width: 100%;
-height: 100%;
-transition: left 1s;
-}
-
-.carousel-item img {
-width: 100%;
-height: 80%;
-object-fit: cover;
-}
-
-.carousel-item a {
-text-decoration: none;
-color: blue;
-}
-
-.carousel-item p {
-position: absolute;
-bottom: 0;
-width: 100%;
-text-align: center;
-}
-
-.carousel-item.active {
-left: 0;
-}
-
-.carousel-nav {
-position: absolute;
-top: 50%;
-transform: translateY(-50%);
-width: 100%;
-display: flex;
-justify-content: space-between;
-}
-
-.prev-btn, .next-btn {
-background-color: transparent;
-border: none;
-cursor: pointer;
-font-size: 24px;
-padding: 10px;
-}
-
-.prev-btn:hover, .next-btn:hover {
-background-color: rgba(0, 0, 0, 0.2);
-}
-
+    
